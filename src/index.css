@@ -1,0 +1,219 @@
+:root {
+  --background-color: #d9e3f0;
+}
+html {
+  background-color: #697689;
+}
+/*Intro*/
+
+.contactButton {
+  background-color: #41c3da;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #3a3a3a;
+  display: flex;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.contactButton:focus {
+  outline: 0;
+}
+
+.contactButton:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.contactButton:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .contactButton {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+#developer {
+  width: 200px;
+  height: 200px;
+}
+.home {
+  background: var(--background-color);
+}
+
+/*Sliding images*/
+@keyframes slider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.logos {
+  overflow: hidden;
+  padding: 30px 0;
+  background: #7bdcb5;
+  white-space: nowrap;
+}
+.logosSlide {
+  animation: 15s slider linear infinite;
+  display: inline-block;
+}
+.slideImage {
+  height: 15vh;
+  margin: 0 40px;
+}
+
+/*icons*/
+.icons-main img {
+  width: clamp(40px, 15vw, 80px);
+
+  fill: #570d0d;
+  color: #570d0d;
+}
+.icons-main img:hover {
+  fill: #570d0d;
+}
+/*Describe about service*/
+.ImageCard {
+  border-radius: 20px;
+  max-width: 15vw;
+  min-width: 12vw;
+  padding: 20px;
+}
+.ImageCard img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: clamp(40px, 5rem, 100px);
+  border-radius: 250px;
+  background-color: #b4b4b4;
+  margin-bottom: 10px;
+}
+
+/*Footer*/
+.Footer {
+  margin-top: auto;
+}
+/*App*/
+.App {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/*Not Found*/
+.NotFound {
+  height: 100vh;
+}
+
+.NotFound img {
+  padding-top: 10%;
+  padding-right: 10%;
+  height: 80vh;
+  animation: flo 6s linear infinite;
+}
+.NotFound a {
+  border: 1px solid whitesmoke;
+  color: #ffffff;
+  padding: 5px;
+  text-decoration: none;
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+.NotFound a:hover {
+  color: #697689;
+  background-color: whitesmoke;
+  border: none;
+}
+
+@media screen and (min-width: 601px) {
+  .NotFound a {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .NotFound a {
+    font-size: 20px;
+  }
+}
+@keyframes flo {
+  0% {
+    transform: translateY(60px);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
+.hidden {
+  display: none;
+}
+/*Form*/
+.Main-form {
+  padding-top: 5vh;
+  height: 100vh;
+  color: #d9e3f0;
+}
+form {
+  width: 50vw;
+  margin-left: 25vw;
+}
+@media screen and (max-width: 850px) {
+  form {
+    width: 100vw;
+    margin: 0%;
+  }
+}
+/*About */
+.About {
+  color: #ffffff;
+}
+.About .col {
+  padding: 50px;
+}
+.About img {
+  height: 15vh;
+  left: 25vw;
+  margin-bottom: 5vh;
+}
+.About p {
+  font-family: monospace;
+  opacity: 0;
+  transition: 2s ease-in-out;
+}
+
+.about-card:hover p {
+  opacity: 1;
+}
